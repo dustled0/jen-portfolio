@@ -10,13 +10,13 @@ const stats = [
     suffix: "+",
     label: "Years of Experience",
   },
-  {
-    id: 2,
-    icon: "bi-folder-check",
-    value: 50,
-    suffix: "+",
-    label: "Projects Completed",
-  },
+  // {
+  //   id: 2,
+  //   icon: "bi-folder-check",
+  //   value: 50,
+  //   suffix: "+",
+  //   label: "Projects Completed",
+  // },
   {
     id: 3,
     icon: "bi-emoji-smile",
@@ -58,7 +58,7 @@ function StatsCounter() {
   return (
     <section ref={sectionRef} className="stats-section">
       <Container>
-        <Row className="g-4">
+        <Row className="g-4 justify-content-center">
           {stats.map((stat, index) => (
             <Col
               xs={6}

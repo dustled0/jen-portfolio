@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import { resumeData } from "../data/resumeData";
 import AvailabilityBadge from "./AvailabilityBadge";
 import WaveDivider from "./WaveDivider";
+import AnimatedBackground from "./AnimatedBackground";
 
 function Hero() {
   const { personal } = resumeData;
@@ -18,6 +19,7 @@ function Hero() {
 
   return (
     <section id="home" className="hero-section">
+      <AnimatedBackground />
       <Container>
         <Row className="align-items-center min-vh-100">
           <Col lg={8} className="mx-auto text-center">
