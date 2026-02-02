@@ -4,6 +4,7 @@ import { resumeData } from "../data/resumeData";
 
 function Hero() {
   const { personal } = resumeData;
+  const basePath = import.meta.env.BASE_URL;
 
   const roles = [
     "Virtual Assistant",
@@ -20,7 +21,7 @@ function Hero() {
           <Col lg={8} className="mx-auto text-center">
             <div className="hero-profile-photo mb-4" data-aos="zoom-in" data-aos-delay="100">
               <img
-                src="/profile.jfif"
+                src={`${basePath}profile.jfif`}
                 alt={personal.name}
                 className="profile-image"
               />
@@ -74,7 +75,7 @@ function Hero() {
               <Button
                 variant="outline-secondary"
                 size="lg"
-                href="/resume.pdf"
+                href={`${basePath}resume.pdf`}
                 download="Jenalyn_Juntilla_Resume.pdf"
               >
                 <i className="bi bi-download me-2"></i>

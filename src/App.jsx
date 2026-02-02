@@ -4,9 +4,11 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import StatsCounter from "./components/StatsCounter";
 import Experience from "./components/Experience";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
+import CanvaGallery from "./components/CanvaGallery";
 import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -33,9 +35,11 @@ function App() {
       <main>
         <Hero />
         <About />
+        <StatsCounter />
         <Experience />
         <Services />
         <Portfolio />
+        <CanvaGallery />
         <Skills />
         <Testimonials />
         <Contact />
