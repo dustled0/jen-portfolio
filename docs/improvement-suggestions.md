@@ -15,8 +15,13 @@ The following features have been successfully implemented:
 | 3 | Portfolio/Work Samples Section | ✅ Completed | 2026-02-02 |
 | 5 | Testimonials/Social Proof | ✅ Completed | 2026-02-02 |
 | 6 | Dark mode toggle | ✅ Completed | 2026-02-02 |
+| 9 | Profile photo | ✅ Completed | 2026-02-02 |
 | 10 | Floating contact button | ✅ Completed | 2026-02-02 |
 | 11 | Back to top button | ✅ Completed | 2026-02-02 |
+| - | Scroll progress indicator | ✅ Completed | 2026-02-02 |
+| - | Active navigation highlighting | ✅ Completed | 2026-02-02 |
+| - | Download resume button | ✅ Completed | 2026-02-02 |
+| - | Dark mode improvements | ✅ Completed | 2026-02-02 |
 
 ### Implementation Details
 
@@ -61,6 +66,36 @@ The following features have been successfully implemented:
 - Fixed bottom-right position
 - Hover lift effect
 
+#### Profile Photo
+- Professional headshot in hero section
+- Circular crop with gradient border
+- Hover animation (scale effect)
+- Located in public/profile.jfif
+
+#### Scroll Progress Indicator
+- Fixed position at top of page
+- Gradient progress bar (primary colors)
+- Updates smoothly on scroll
+- 4px height with glow effect
+
+#### Active Navigation Highlighting
+- Uses Intersection Observer API
+- Highlights current section in navbar
+- Underline indicator on active link
+- Smooth transitions between sections
+
+#### Download Resume Button
+- Added to hero section
+- Downloads as Jenalyn_Juntilla_Resume.pdf
+- Styled with outline-secondary variant
+- Located in public/resume.pdf
+
+#### Dark Mode Improvements
+- Updated to slate-blue professional palette
+- Improved text contrast and readability
+- Comprehensive Bootstrap component overrides
+- Proper styling for all UI elements
+
 ---
 
 ## Pending Improvements
@@ -85,22 +120,6 @@ Graphic Design       ████████████████░░░�
 Video Editing        ██████████████░░░░░░░░░░  75%
 CRM Platforms        ████████████░░░░░░░░░░░░  70%
 ```
-
----
-
-#### 9. Profile Photo
-**Status:** ⏳ Pending
-
-**Currently missing** - personal connection matters.
-
-**Implementation:**
-- Professional headshot in Hero or About section
-- Circular crop with border/shadow
-- Subtle hover animation (scale or glow)
-
-**Placement options:**
-- Hero section (side by side with text)
-- About section (in personal info card)
 
 ---
 
@@ -306,10 +325,10 @@ Share industry insights to demonstrate expertise.
 
 | Feature | Effort | Impact | Status |
 |---------|--------|--------|--------|
-| Profile photo | Low | High | ⏳ Pending |
-| Download resume button | Low | High | ⏳ Pending |
-| Active nav highlighting | Low | Medium | ⏳ Pending |
-| Scroll progress indicator | Low | Medium | ⏳ Pending |
+| Profile photo | Low | High | ✅ Completed |
+| Download resume button | Low | High | ✅ Completed |
+| Active nav highlighting | Low | Medium | ✅ Completed |
+| Scroll progress indicator | Low | Medium | ✅ Completed |
 
 ### Medium Effort
 
@@ -333,10 +352,10 @@ Share industry insights to demonstrate expertise.
 
 ## Recommended Next Steps
 
-1. **Profile photo** - If available, adds personal touch
-2. **Stats counter section** - Impressive visual impact
-3. **Active navigation highlighting** - Better UX
-4. **Download resume button** - Essential for job seekers
+1. **Stats counter section** - Impressive visual impact
+2. **Interactive skills (progress bars)** - Visual skill representation
+3. **Contact form** - Professional contact method
+4. **Preloader animation** - Polished first impression
 
 ---
 
