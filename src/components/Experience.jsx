@@ -9,15 +9,22 @@ function Experience() {
       <Container>
         <Row className="mb-5">
           <Col lg={8} className="mx-auto text-center">
-            <h2 className="section-title">Work Experience</h2>
-            <div className="section-divider"></div>
+            <h2 className="section-title" data-aos="fade-up">
+              Work Experience
+            </h2>
+            <div className="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
           </Col>
         </Row>
         <Row>
           <Col lg={10} className="mx-auto">
             <div className="timeline">
               {experience.map((exp, index) => (
-                <div key={index} className="timeline-item">
+                <div
+                  key={index}
+                  className="timeline-item"
+                  data-aos="fade-up"
+                  data-aos-delay={150 * (index + 1)}
+                >
                   <Card className="border-0 shadow-sm">
                     <Card.Body className="p-4">
                       <div className="d-flex flex-wrap justify-content-between align-items-start mb-3">

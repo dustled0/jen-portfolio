@@ -9,12 +9,14 @@ function About() {
       <Container>
         <Row className="mb-5">
           <Col lg={8} className="mx-auto text-center">
-            <h2 className="section-title">About Me</h2>
-            <div className="section-divider"></div>
+            <h2 className="section-title" data-aos="fade-up">
+              About Me
+            </h2>
+            <div className="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
           </Col>
         </Row>
         <Row className="g-4">
-          <Col lg={6}>
+          <Col lg={6} data-aos="fade-right" data-aos-delay="200">
             <Card className="h-100 border-0 shadow-sm">
               <Card.Body className="p-4">
                 <h3 className="h5 mb-4">
@@ -48,7 +50,7 @@ function About() {
               </Card.Body>
             </Card>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} data-aos="fade-left" data-aos-delay="300">
             <Card className="h-100 border-0 shadow-sm">
               <Card.Body className="p-4">
                 <h3 className="h5 mb-4">

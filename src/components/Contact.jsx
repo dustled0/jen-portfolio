@@ -9,15 +9,17 @@ function Contact() {
       <Container>
         <Row className="mb-5">
           <Col lg={8} className="mx-auto text-center">
-            <h2 className="section-title">Get In Touch</h2>
-            <div className="section-divider"></div>
-            <p className="text-muted">
+            <h2 className="section-title" data-aos="fade-up">
+              Get In Touch
+            </h2>
+            <div className="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p className="text-muted" data-aos="fade-up" data-aos-delay="150">
               I&apos;m always open to discussing new opportunities and projects
             </p>
           </Col>
         </Row>
         <Row className="g-4 justify-content-center">
-          <Col md={6} lg={4}>
+          <Col md={6} lg={4} data-aos="fade-up" data-aos-delay="200">
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body className="p-4">
                 <div className="contact-icon mb-3">
@@ -33,7 +35,7 @@ function Contact() {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={6} lg={4}>
+          <Col md={6} lg={4} data-aos="fade-up" data-aos-delay="300">
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body className="p-4">
                 <div className="contact-icon mb-3">
@@ -49,7 +51,7 @@ function Contact() {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={6} lg={4}>
+          <Col md={6} lg={4} data-aos="fade-up" data-aos-delay="400">
             <Card className="border-0 shadow-sm text-center h-100">
               <Card.Body className="p-4">
                 <div className="contact-icon mb-3">
@@ -69,7 +71,7 @@ function Contact() {
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col className="text-center">
+          <Col className="text-center" data-aos="zoom-in" data-aos-delay="500">
             <Button
               variant="primary"
               size="lg"

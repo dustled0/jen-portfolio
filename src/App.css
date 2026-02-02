@@ -1,5 +1,34 @@
 /* Additional App-specific styles */
 
+/* Typewriter effect styles */
+.typewriter-container {
+  min-height: 2rem;
+}
+
+.typewriter-container .Typewriter {
+  display: inline;
+}
+
+.typewriter-container .Typewriter__wrapper {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.typewriter-container .Typewriter__cursor {
+  color: var(--primary-color);
+  font-weight: 300;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 /* Card hover effects */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -31,6 +60,184 @@
   color: var(--text-muted);
 }
 
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.5);
+}
+
+.back-to-top i {
+  font-size: 1.25rem;
+}
+
+/* Floating Contact Button */
+.floating-contact {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 999;
+}
+
+.floating-contact-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+.floating-contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.5);
+}
+
+.floating-contact-btn.open {
+  background: var(--text-color);
+  transform: rotate(90deg);
+}
+
+.floating-contact-btn i {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-options {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.contact-options.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.contact-option {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--option-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.contact-option:hover {
+  transform: scale(1.15);
+  color: #ffffff;
+}
+
+.contact-option i {
+  font-size: 1.2rem;
+}
+
+.contact-tooltip {
+  position: absolute;
+  left: 60px;
+  background: var(--text-color);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-tooltip::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent var(--text-color) transparent transparent;
+}
+
+.contact-option:hover .contact-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Pulse animation for floating contact */
+.floating-contact-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+.floating-contact-btn.open::before {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 576px) {
   .btn {
@@ -41,5 +248,27 @@
   .d-flex.gap-3 {
     flex-direction: column;
     gap: 0.5rem !important;
+  }
+
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .floating-contact {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .floating-contact-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-option {
+    width: 42px;
+    height: 42px;
   }
 }

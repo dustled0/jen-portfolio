@@ -9,16 +9,24 @@ function Services() {
       <Container>
         <Row className="mb-5">
           <Col lg={8} className="mx-auto text-center">
-            <h2 className="section-title">Services I Offer</h2>
-            <div className="section-divider"></div>
-            <p className="text-muted">
+            <h2 className="section-title" data-aos="fade-up">
+              Services I Offer
+            </h2>
+            <div className="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+            <p className="text-muted" data-aos="fade-up" data-aos-delay="150">
               Professional services tailored to meet your business needs
             </p>
           </Col>
         </Row>
         <Row className="g-4">
           {services.map((service, index) => (
-            <Col md={6} lg={3} key={index}>
+            <Col
+              md={6}
+              lg={3}
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={100 * (index + 1)}
+            >
               <Card className="h-100 border-0 shadow-sm service-card text-center">
                 <Card.Body className="p-4">
                   <div className="service-icon mb-4">

@@ -1,21 +1,61 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Typewriter from "typewriter-effect";
 import { resumeData } from "../data/resumeData";
 
 function Hero() {
   const { personal } = resumeData;
+
+  const roles = [
+    "Virtual Assistant",
+    "Customer Support Specialist",
+    "Graphic Designer",
+    "Video Editor",
+    "English Teacher",
+  ];
 
   return (
     <section id="home" className="hero-section">
       <Container>
         <Row className="align-items-center min-vh-100">
           <Col lg={8} className="mx-auto text-center">
-            <p className="text-uppercase letter-spacing mb-3 text-primary">
+            <p
+              className="text-uppercase letter-spacing mb-3 text-primary"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
               Welcome to my portfolio
             </p>
-            <h1 className="display-3 fw-bold mb-4">{personal.name}</h1>
-            <h2 className="h4 text-muted mb-4">{personal.title}</h2>
-            <p className="lead mb-5">{resumeData.summary}</p>
-            <div className="d-flex gap-3 justify-content-center flex-wrap">
+            <h1
+              className="display-3 fw-bold mb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              {personal.name}
+            </h1>
+            <h2
+              className="h4 text-muted mb-4 typewriter-container"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <Typewriter
+                options={{
+                  strings: roles,
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 30,
+                  delay: 80,
+                  pauseFor: 2000,
+                }}
+              />
+            </h2>
+            <p className="lead mb-5" data-aos="fade-up" data-aos-delay="400">
+              {resumeData.summary}
+            </p>
+            <div
+              className="d-flex gap-3 justify-content-center flex-wrap"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <Button variant="primary" size="lg" href="#contact">
                 <i className="bi bi-envelope me-2"></i>
                 Get in Touch
@@ -28,7 +68,7 @@ function Hero() {
           </Col>
         </Row>
       </Container>
-      <div className="hero-scroll-indicator">
+      <div className="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="700">
         <a href="#about">
           <i className="bi bi-chevron-down"></i>
         </a>

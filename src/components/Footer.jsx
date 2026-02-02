@@ -9,12 +9,16 @@ function Footer() {
     <footer className="footer-section">
       <Container>
         <Row className="align-items-center">
-          <Col md={6} className="text-center text-md-start mb-3 mb-md-0">
+          <Col
+            md={6}
+            className="text-center text-md-start mb-3 mb-md-0"
+            data-aos="fade-right"
+          >
             <p className="mb-0">
               &copy; {currentYear} {personal.name}. All rights reserved.
             </p>
           </Col>
-          <Col md={6} className="text-center text-md-end">
+          <Col md={6} className="text-center text-md-end" data-aos="fade-left">
             <div className="social-links">
               <a
                 href={`mailto:${personal.email}`}
