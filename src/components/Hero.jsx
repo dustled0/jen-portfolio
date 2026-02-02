@@ -1,6 +1,8 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 import { resumeData } from "../data/resumeData";
+import AvailabilityBadge from "./AvailabilityBadge";
+import WaveDivider from "./WaveDivider";
 
 function Hero() {
   const { personal } = resumeData;
@@ -26,15 +28,16 @@ function Hero() {
                 className="profile-image"
               />
             </div>
+            <AvailabilityBadge />
             <p
-              className="text-uppercase letter-spacing mb-3 text-primary"
+              className="text-uppercase letter-spacing mb-3 text-primary mt-3"
               data-aos="fade-down"
               data-aos-delay="200"
             >
               Welcome to my portfolio
             </p>
             <h1
-              className="display-3 fw-bold mb-4"
+              className="display-3 fw-bold mb-4 gradient-text"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -90,6 +93,7 @@ function Hero() {
           <i className="bi bi-chevron-down"></i>
         </a>
       </div>
+      <WaveDivider position="bottom" color="var(--bg-body)" />
     </section>
   );
 }
