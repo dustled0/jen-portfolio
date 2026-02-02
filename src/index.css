@@ -727,7 +727,164 @@ body {
   border-radius: 2px;
 }
 
-/* Timeline */
+/* Interactive Timeline */
+.timeline-interactive {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.timeline-interactive::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--primary-color), #6f42c1, #198754);
+  border-radius: 3px;
+}
+
+.timeline-item-interactive {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--marker-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.timeline-marker i {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.timeline-item-interactive:hover .timeline-marker,
+.timeline-item-interactive.expanded .timeline-marker {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-card {
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 4px solid transparent !important;
+}
+
+.timeline-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.timeline-card.active {
+  border-left-color: var(--primary-color) !important;
+}
+
+.timeline-title {
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.timeline-card:hover .timeline-title {
+  color: var(--primary-color);
+}
+
+.timeline-badge {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.expand-indicator {
+  color: var(--primary-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.expand-indicator i {
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover .expand-indicator {
+  color: var(--primary-dark);
+}
+
+.timeline-details {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.timeline-details h6 {
+  color: var(--text-color);
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities-list li {
+  padding: 0.5rem 0;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+}
+
+.responsibilities-list li i {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.skill-tag {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color) !important;
+  transition: var(--transition);
+}
+
+.skill-tag:hover {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  border-color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .skill-tag {
+  background-color: var(--bg-light) !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .skill-tag:hover {
+  background-color: var(--primary-color) !important;
+  color: #0f172a !important;
+}
+
+.achievement-item {
+  padding: 0.5rem 0;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Legacy Timeline (keep for compatibility) */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -759,6 +916,27 @@ body {
   background: var(--primary-color);
   border: 2px solid var(--white);
   box-shadow: var(--shadow);
+}
+
+/* Mobile Timeline Adjustments */
+@media (max-width: 768px) {
+  .timeline-interactive {
+    padding-left: 3rem;
+  }
+
+  .timeline-interactive::before {
+    left: 1rem;
+  }
+
+  .timeline-marker {
+    left: -2rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-marker i {
+    font-size: 1rem;
+  }
 }
 
 /* Service Cards */
