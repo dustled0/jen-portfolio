@@ -1,0 +1,45 @@
+/* Additional App-specific styles */
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button styles */
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.btn-outline-primary {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+/* List styles in experience */
+#experience ul {
+  padding-left: 1.25rem;
+}
+
+#experience li {
+  color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+}
