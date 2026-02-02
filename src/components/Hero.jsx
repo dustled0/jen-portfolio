@@ -19,9 +19,11 @@ function Hero() {
         <Row className="align-items-center min-vh-100">
           <Col lg={8} className="mx-auto text-center">
             <div className="hero-profile-photo mb-4" data-aos="zoom-in" data-aos-delay="100">
-              <div className="profile-placeholder">
-                <i className="bi bi-person-fill"></i>
-              </div>
+              <img
+                src="/profile.jfif"
+                alt={personal.name}
+                className="profile-image"
+              />
             </div>
             <p
               className="text-uppercase letter-spacing mb-3 text-primary"
